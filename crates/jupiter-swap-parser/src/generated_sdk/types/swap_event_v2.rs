@@ -11,12 +11,7 @@ use solana_pubkey::Pubkey;
 
 #[derive(BorshSerialize, BorshDeserialize, Clone, Debug, Eq, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-pub struct SwapEvent {
-    #[cfg_attr(
-        feature = "serde",
-        serde(with = "serde_with::As::<serde_with::DisplayFromStr>")
-    )]
-    pub amm: Pubkey,
+pub struct SwapEventV2 {
     #[cfg_attr(
         feature = "serde",
         serde(with = "serde_with::As::<serde_with::DisplayFromStr>")
